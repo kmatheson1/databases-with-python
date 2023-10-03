@@ -22,3 +22,5 @@ albums = album_repository.all()
 
 for album in albums:
     print(album)
+
+print(album_repository.find(1))
