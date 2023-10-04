@@ -13,7 +13,7 @@ connection.seed("seeds/music_library.sql")
 artist_repository = ArtistRepository(connection)
 artists = artist_repository.all()
 
-# List them out
+# List them out__di
 for artist in artists:
     print(artist)
 
