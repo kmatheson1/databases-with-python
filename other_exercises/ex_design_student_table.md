@@ -5,7 +5,7 @@ _Copy this recipe template to design and create a database table from a specific
 
 ## 1. Extract nouns from the user stories or specification
 
-'''
+```
 # EXAMPLE USER STORY:
 # (analyse only the relevant part - here, the final line).
 
@@ -16,12 +16,12 @@ I want to see a list of students' names.
 As a coach
 So I can get to know all students
 I want to see a list of students' cohorts.
-'''
-'''
+```
+```
 Nouns:
 
 student, name, cohort
-'''
+```
 
 
 ## 2. Infer the Table Name and Columns
@@ -56,7 +56,7 @@ cohort: text
 
 ## 4. Write the SQL
 
-'''sql
+```sql
 
 -- EXAMPLE
 -- file: students_table.sql
@@ -69,10 +69,10 @@ CREATE TABLE albums (
   cohort text
 );
 
-'''
+```
 
 ## 5. Create the Table
 
-'''
+```bash
 psql -h 127.0.0.1 database_name < albums_table.sql
-'''
+```
