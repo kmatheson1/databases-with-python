@@ -1,6 +1,8 @@
 from lib.order_repository import OrderRepository
 from lib.order import Order
+from lib.item import Item
 from datetime import date
+
 
 """
 if OrderRepository#all is called
@@ -25,7 +27,7 @@ def test_all(db_connection):
 if OrderRepository#create is called
 the order passed is added to the list
 """
-def test_all(db_connection):
+def test_create(db_connection):
     db_connection.seed("seeds/shop_directory1.sql")
     repository = OrderRepository(db_connection)
 
@@ -43,3 +45,20 @@ def test_all(db_connection):
                     Order(5, 'Leo', date(2023, 9, 10).strftime(date_format)),
                     Order(6, 'Hannah', date(2023, 11, 30).strftime(date_format))
                     ]
+
+"""
+If OrderRepository#findwithitems is called
+the order with list of items is returned
+"""
+def test_find_with_items(db_connection):
+    db_connection.seed("seeds/shop_directory1.sql")
+    repository = OrderRepository(db_connection)
+
+    date_format = '%Y-%m-%d'
+
+    order = repository.find_with_items(1)
+    assert order == Order(1, 'Kieran', date(2023, 9, 10).strftime(date_format), [
+        Item(1, 'Banana', 0.8, 30),
+        Item(2, 'Apple', 0.9, 20),
+        Item(4, 'Orange Juice', 1.8, 10)
+    ])
