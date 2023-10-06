@@ -14,6 +14,5 @@ class CohortRepository():
         for row in rows:
             student = Student(row["student_id"], row["student_name"], row["cohort_id"])
             students.append(student)
-        print(students)
         
         return Cohort(rows[0]["cohort_id"], rows[0]["cohort_name"], rows[0]["starting_date"], students)

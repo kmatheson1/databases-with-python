@@ -3,7 +3,7 @@ from lib.post import Post
 def test_post_constructs():
     post = Post(1, "Title", "Contents")
     assert post.id == 1
-    assert post.title == "Title"
+    assert post.name == "Title"
     assert post.contents == "Contents"
 
 def test_equality():

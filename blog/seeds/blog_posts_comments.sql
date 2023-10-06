@@ -7,7 +7,7 @@ DROP SEQUENCE IF EXISTS comments_id_seq;
 
 CREATE SEQUENCE IF NOT EXISTS posts_id_seq;
 CREATE TABLE posts (
-    id int,
+    id serial PRIMARY key,
     name text,
     contents text
 );
@@ -15,17 +15,17 @@ CREATE TABLE posts (
 
 CREATE SEQUENCE IF NOT EXISTS comments_id_seq;
 CREATE TABLE comments (
-    id int,
+    id serial PRIMARY key,
     name text,
     contents text,
-    post_id int4,
-    CONSTRAINT "fk_post" FOREIGN KEY ("post_id") REFERENCES "public"."posts"("id") ON DELETE CASCADE,
+    post_id int,
+    constraint fk_post foreign key(post_id) references posts(id) on delete cascade
 );
 
-INSERT INTO  (name, contents) VALUES ('James', 'Hellow World');
-INSERT INTO  (name, contents) VALUES ('John', 'Hello World!');
-INSERT INTO  (name, contents) VALUES ('Lewis', 'Goodbye');
-INSERT INTO  (name, contents) VALUES ('Josh', 'Welcome');
+INSERT INTO posts (name, contents) VALUES ('James', 'Hello World');
+INSERT INTO posts (name, contents) VALUES ('John', 'Hello World!');
+INSERT INTO posts (name, contents) VALUES ('Lewis', 'Goodbye');
+INSERT INTO posts (name, contents) VALUES ('Josh', 'Welcome');
 
 INSERT INTO comments (name, contents, post_id) VALUES ('Kieran', 'Hello', 1);
 INSERT INTO comments (name, contents, post_id) VALUES ('Jane', 'Nice', 1);
