@@ -1,10 +1,10 @@
 
 class Post():
-    def __init__(self, id, name, contents, comments = None):
+    def __init__(self, id, name, contents, comments = []):
         self.id = id
         self.name = name
         self.contents = contents
-        self.comments = comments or []
+        self.comments = comments
 
     def __eq__(self, other):
         if other is None:

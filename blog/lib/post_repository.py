@@ -14,5 +14,5 @@ class PostRepository():
         for row in rows:
             comment = Comment(row['comment_id'], row['comment_name'], row['comment_contents'], row['post_id'])
             comments.append(comment)
-
+        print(comments)
         return Post(rows[0]["post_id"], rows[0]['name'], rows[0]['contents'], comments)

@@ -12,7 +12,6 @@ CREATE TABLE posts (
     contents text
 );
 
-
 CREATE SEQUENCE IF NOT EXISTS comments_id_seq;
 CREATE TABLE comments (
     id serial PRIMARY key,
