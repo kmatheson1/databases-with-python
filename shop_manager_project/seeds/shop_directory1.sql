@@ -32,13 +32,13 @@ CREATE TABLE "public"."orders" (
 );
 
 INSERT INTO "public"."items" ("name", "unit_price", "quantity") VALUES
-('banana', 0.8, 30),
-('apple', 0.9, 20),
-('white bread', 1.5, 15),
-('orange juice', 1.8, 10),
-('apple juice', 1.8, 12),
-('wine', 6, 30),
-('beer', 3.2, 60);
+('Banana', 0.8, 30),
+('Apple', 0.9, 20),
+('White Bread', 1.5, 15),
+('Orange Juice', 1.8, 10),
+('Apple Juice', 1.8, 12),
+('Wine', 6, 30),
+('Beer', 3.2, 60);
 
 INSERT INTO "public"."items_orders" ("item_id", "order_id") VALUES
 (1, 1),
