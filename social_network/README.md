@@ -1,75 +1,36 @@
-# Database Project Starter
+## Social Network Project 
 
-This is a starter project for you to use to start your Python database projects.
+# Exercise
 
-There are two videos to support:
+Your assignment is to test-drive a social network program. You should:
 
-* [A demonstration of setting up the project](https://youtu.be/8dBADUN8gdg?t=0s)
-* [A walkthrough of the project codebase](https://www.youtube.com/watch?v=8dBADUN8gdg&t=287s) 
+Set up a new project called social_network from the starter.
 
-## Setup
+Use the Two Tables Design Recipe to design and create a table for the following user stories:
 
-```shell
-# Clone the repository to your local machine
-; git clone git@github.com:makersacademy/databases-in-python-project-starter.git YOUR_PROJECT_NAME
+  As a social network user,
+  So I can have my information registered,
+  I'd like to have a user account with my email address.
 
-# Or, if you don't have SSH keys set up
-; git clone https://github.com/makersacademy/databases-in-python-project-starter.git YOUR_PROJECT_NAME
+  As a social network user,
+  So I can have my information registered,
+  I'd like to have a user account with my username.
 
-# Enter the directory
-; cd YOUR_PROJECT_NAME
+  As a social network user,
+  So I can write on my timeline,
+  I'd like to create posts associated with my user account.
 
-# Install dependencies and set up the virtual environment
-; pipenv install
-# Read below if you see an error with `python_full_version`
+  As a social network user,
+  So I can write on my timeline,
+  I'd like each of my posts to have a title and a content.
 
-# Activate the virtual environment
-; pipenv shell
+  As a social network user,
+  So I can know who reads my posts,
+  I'd like each of my posts to have a number of views.
 
-# Create the database
-; createdb YOUR_PROJECT_NAME
+Create a seeds/social_network.sql.
 
-# Open lib/database_connection.py and change the database name to YOUR_PROJECT_NAME
-; open lib/database_connection.py
-
-# Run the tests
-; pytest
-
-# Run the app
-; python app.py
-```
-
-<details>
-  <summary>:confused: I see an error about `python_full_version`?</summary>
-
-  <!-- OMITTED -->
-
-  ---
-
-  Your `pipenv` may be outdated and subject to a bug with newer `Pipfile`s.
-
-  ```shell
-  ; pipenv --version
-  2022.9.24 # If you see something in September 2022, try this
-  ; pip3 install "pipenv>=2022.11.5" -U
-  # pip3 will update pipenv for you
-
-  # Then try running `pipenv install` again
-  ; pipenv install
-  ```
-
-  If that works, great! If not, contact your coach.
-
-  ---
-</details>
+Test-drive the application to meet the user stories above.
 
 
-<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
----
-
-**How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😀)  
-Click an emoji to tell us.
-
-<!-- END GENERATED SECTION DO NOT EDIT -->

@@ -1,75 +1,68 @@
-# Database Project Starter
+## Music Library Project 
 
-This is a starter project for you to use to start your Python database projects.
+# Exercise
 
-There are two videos to support:
+You have the code for handling the Artist data, now your assignment is to test-drive two new classes; an Album class and an AlbumRepository class with an all method, using the Design Recipe above.
 
-* [A demonstration of setting up the project](https://youtu.be/8dBADUN8gdg?t=0s)
-* [A walkthrough of the project codebase](https://www.youtube.com/watch?v=8dBADUN8gdg&t=287s) 
+Work in the music_library project you created earlier.
 
-## Setup
+Test-drive an Album class that has attributes for each column in the albums table. You can find the table in seeds/music_library.sql.
 
-```shell
-# Clone the repository to your local machine
-; git clone git@github.com:makersacademy/databases-in-python-project-starter.git YOUR_PROJECT_NAME
+Test-drive an AlbumRepository class that has a method all that returns a list of Album objects.
 
-# Or, if you don't have SSH keys set up
-; git clone https://github.com/makersacademy/databases-in-python-project-starter.git YOUR_PROJECT_NAME
+Write a small program in app.py using the class AlbumRepository to print out the list of albums to the terminal.
 
-# Enter the directory
-; cd YOUR_PROJECT_NAME
 
-# Install dependencies and set up the virtual environment
-; pipenv install
-# Read below if you see an error with `python_full_version`
+# Exercise
 
-# Activate the virtual environment
+Your assignment is to:
+
+Test-drive a find method for your AlbumRepository class.
+
+Modify app.py to print to the terminal the album with id 1 using your new find method.
+
+Use your music_library project from the previous section.
+
+
+# Challenge
+
+Your assignment is to:
+
+Test-drive a create method for your AlbumRepository class.
+
+Test-drive a delete method for your AlbumRepository class.
+
+Use your music_library project from the previous section.
+
+
+# Exercise
+
+It should work like this:
+
+```bash
 ; pipenv shell
-
-# Create the database
-; createdb YOUR_PROJECT_NAME
-
-# Open lib/database_connection.py and change the database name to YOUR_PROJECT_NAME
-; open lib/database_connection.py
-
-# Run the tests
-; pytest
-
-# Run the app
 ; python app.py
-```
 
-<details>
-  <summary>:confused: I see an error about `python_full_version`?</summary>
+Welcome to the music library manager!
 
-  <!-- OMITTED -->
+What would you like to do?
+ 1 - List all albums
+ 2 - List all artists
 
-  ---
+Enter your choice: 1
+[ENTER]
 
-  Your `pipenv` may be outdated and subject to a bug with newer `Pipfile`s.
-
-  ```shell
-  ; pipenv --version
-  2022.9.24 # If you see something in September 2022, try this
-  ; pip3 install "pipenv>=2022.11.5" -U
-  # pip3 will update pipenv for you
-
-  # Then try running `pipenv install` again
-  ; pipenv install
-  ```
-
-  If that works, great! If not, contact your coach.
-
-  ---
-</details>
-
-
-<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
-
----
-
-**How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases-in-python-project-starter&prefill_File=README.md&prefill_Sentiment=😀)  
-Click an emoji to tell us.
-
-<!-- END GENERATED SECTION DO NOT EDIT -->
+Here is the list of albums:
+ * 1 - Doolittle
+ * 2 - Surfer Rosa
+ * 3 - Waterloo
+ * 4 - Super Trouper
+ * 5 - Bossanova
+ * 6 - Lover
+ * 7 - Folklore
+ * 8 - I Put a Spell on You
+ * 9 - Baltimore
+ * 10 -	Here Comes the Sun
+ * 11 - Fodder on My Wings
+ * 12 -	Ring Ring
+ ```
