@@ -1,4 +1,4 @@
-from lib.order_repsoitory import OrderRepository
+from lib.order_repository import OrderRepository
 from lib.order import Order
 from datetime import date
 
