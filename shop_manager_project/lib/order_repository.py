@@ -22,6 +22,7 @@ class OrderRepository():
                                         'JOIN items_orders ON items_orders.order_id = orders.id ' \
                                         'JOIN items ON items_orders.item_id = items.id ' \
                                         'WHERE orders.id = %s', [order_id])
+        
         items = [Item(row['item_id'], row['name'], row['unit_price'], row['quantity']) 
                 for row in rows]
         return Order(rows[0]['order_id'], rows[0]['customer_name'], str(rows[0]['date_ordered']), items)
